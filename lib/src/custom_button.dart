@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class GradientButton extends StatelessWidget {
   final double buttonWidth;
   final double buttonHeight;
   final double buttonRadius;
@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
   final Color splashColor;
   final VoidCallback onPressed;
 
-  CustomButton(
+  GradientButton(
       {this.buttonColorGradient,
       this.buttonWidth = 150.0,
       this.buttonHeight = 50.0,

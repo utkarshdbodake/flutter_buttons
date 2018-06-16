@@ -30,11 +30,11 @@ class KFlatButton extends StatelessWidget {
     return ButtonTheme(
       minWidth: minWidth,
       height: height,
-      child: _constructOutlineButton(),
+      child: _constructFlatButton(),
     );
   }
 
-  Widget _constructOutlineButton() {
+  Widget _constructFlatButton() {
     if (icon == null) {
       return FlatButton(
         color: color,

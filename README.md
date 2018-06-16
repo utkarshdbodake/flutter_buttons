@@ -44,7 +44,7 @@ Use flat button:
 
 Use custom button with gradient:
 ```
-    CustomButton(
+    GradientButton(
         buttonColorGradient: [ Colors.teal.shade100, Colors.teal.shade900 ],
         buttonBorderColor: Colors.teal,
         buttonText: 'Custom button',
@@ -53,6 +53,23 @@ Use custom button with gradient:
         splashColor: Colors.white,
         onPressed: () {},
     )
+```
+
+Use selected button:
+```
+    SelectedButton(
+        radius: 30.0,
+        unselectedButtonColor: Colors.white,
+        selectedButtonColor: Colors.teal,
+        text: 'Selected Button',
+        unselectedTextColor: Colors.teal,
+        selectedTextColor: Colors.white,
+        textFontWeight: FontWeight.bold,
+        iconData: Icons.email,
+        unselectedIconColor: Colors.teal,
+        selectedIconColor: Colors.white,
+        onPressed: () {},
+    ),
 ```
 
 ## Getting Started

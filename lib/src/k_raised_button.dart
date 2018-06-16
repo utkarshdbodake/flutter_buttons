@@ -30,11 +30,11 @@ class KRaisedButton extends StatelessWidget {
     return ButtonTheme(
       minWidth: minWidth,
       height: height,
-      child: _constructOutlineButton(),
+      child: _constructRaisedButton(),
     );
   }
 
-  Widget _constructOutlineButton() {
+  Widget _constructRaisedButton() {
     if (icon == null) {
       return RaisedButton(
         color: color,
