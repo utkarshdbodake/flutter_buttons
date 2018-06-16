@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-
   final double buttonWidth;
   final double buttonHeight;
   final double buttonRadius;
@@ -15,24 +14,22 @@ class CustomButton extends StatelessWidget {
   final Color splashColor;
   final VoidCallback onPressed;
 
-  CustomButton({
-    this.buttonColorGradient,
-    this.buttonWidth = 150.0,
-    this.buttonHeight = 50.0,
-    this.buttonRadius = 30.0,
-    this.buttonBorderWidth = 1.0,
-    @required this.buttonBorderColor,
-    @required this.buttonText,
-    @required this.buttonTextColor,
-    this.buttonTextFontWeight = FontWeight.normal,
-    @required this.highlightColor,
-    @required this.splashColor,
-    @required this.onPressed
-  });
+  CustomButton(
+      {this.buttonColorGradient,
+      this.buttonWidth = 150.0,
+      this.buttonHeight = 50.0,
+      this.buttonRadius = 30.0,
+      this.buttonBorderWidth = 1.0,
+      @required this.buttonBorderColor,
+      @required this.buttonText,
+      @required this.buttonTextColor,
+      this.buttonTextFontWeight = FontWeight.normal,
+      @required this.highlightColor,
+      @required this.splashColor,
+      @required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       width: buttonWidth,
       height: buttonHeight,
@@ -44,9 +41,7 @@ class CustomButton extends StatelessWidget {
           child: Text(
             buttonText,
             style: TextStyle(
-                color: buttonTextColor,
-                fontWeight: buttonTextFontWeight
-            ),
+                color: buttonTextColor, fontWeight: buttonTextFontWeight),
           ),
           highlightColor: highlightColor.withOpacity(0.5),
           splashColor: splashColor.withOpacity(0.5),
@@ -57,16 +52,12 @@ class CustomButton extends StatelessWidget {
   }
 
   BoxDecoration _getColoredBoxDecoration(BuildContext context) {
-
     // Get box decoration for transparent button.
     if (buttonColorGradient == null) {
       return BoxDecoration(
         borderRadius: BorderRadius.circular(buttonRadius),
         color: Colors.transparent,
-        border: Border.all(
-            color: buttonBorderColor,
-            width: buttonBorderWidth
-        ),
+        border: Border.all(color: buttonBorderColor, width: buttonBorderWidth),
       );
     }
 
@@ -76,12 +67,8 @@ class CustomButton extends StatelessWidget {
       gradient: LinearGradient(
           colors: buttonColorGradient,
           begin: Alignment(0.5, -1.0),
-          end: Alignment(0.5, 1.0)
-      ),
-      border: Border.all(
-          color: buttonBorderColor,
-          width: buttonBorderWidth
-      ),
+          end: Alignment(0.5, 1.0)),
+      border: Border.all(color: buttonBorderColor, width: buttonBorderWidth),
     );
   }
 }

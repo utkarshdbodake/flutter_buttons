@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class KFlatButton extends StatelessWidget {
-
   final double minWidth;
   final double height;
   final double radius;
@@ -14,18 +13,17 @@ class KFlatButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Icon icon;
 
-  KFlatButton({
-    this.minWidth = 150.0,
-    this.height = 50.0,
-    this.radius = 0.0,
-    this.color = Colors.transparent,
-    @required this.text,
-    @required this.textColor,
-    this.textFontWeight = FontWeight.normal,
-    this.textFontSize = 15.0,
-    @required this.onPressed,
-    this.icon
-  });
+  KFlatButton(
+      {this.minWidth = 150.0,
+      this.height = 50.0,
+      this.radius = 0.0,
+      this.color = Colors.transparent,
+      @required this.text,
+      @required this.textColor,
+      this.textFontWeight = FontWeight.normal,
+      this.textFontSize = 15.0,
+      @required this.onPressed,
+      this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,6 @@ class KFlatButton extends StatelessWidget {
   }
 
   Widget _constructOutlineButton() {
-
     if (icon == null) {
       return FlatButton(
         color: color,
@@ -50,8 +47,7 @@ class KFlatButton extends StatelessWidget {
           style: TextStyle(
               color: textColor,
               fontWeight: textFontWeight,
-              fontSize: textFontSize
-          ),
+              fontSize: textFontSize),
         ),
       );
     }
@@ -65,8 +61,7 @@ class KFlatButton extends StatelessWidget {
         style: TextStyle(
             color: textColor,
             fontWeight: textFontWeight,
-            fontSize: textFontSize
-        ),
+            fontSize: textFontSize),
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(radius),
