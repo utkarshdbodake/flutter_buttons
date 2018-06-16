@@ -3,7 +3,7 @@
 Ready-made various button styles for Flutter.
 
 ## Various buttons
-![Finished App](https://github.com/utkarshdbodake/flutter_buttons/blob/master/buttonDemo.png)
+![Finished App](https://github.com/utkarshdbodake/flutter_buttons/blob/master/button_demo.gif)
 
 ## Usage
 Use raised button:
